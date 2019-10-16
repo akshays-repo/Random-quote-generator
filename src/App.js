@@ -18,7 +18,7 @@ const styles =(theme=> ( {
  },
  card: {
   minWidth: 275,
-  background: '#f5f5f5',
+  background:  'linear-gradient(to right bottom, #26D0CE, #F45C43,#A6FFCB)',
  },
  
 bullet: {
