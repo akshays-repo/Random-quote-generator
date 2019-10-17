@@ -12,7 +12,7 @@ import AppBar from './components/appbar'
 
 const styles =(theme=> ( {
   App:{
-    background:'#ecf0f1'
+    background:'#EAF0F1'
   },
  container:{
    display:'flex',
@@ -21,7 +21,7 @@ const styles =(theme=> ( {
  },
  card: {
   minWidth: 275,
-  background:  '#dcdde1',
+  background:'#EAF0F1',
  },
  
 bullet: {
