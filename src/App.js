@@ -93,7 +93,7 @@ class App extends Component {
             {this.selectedQuote.author} 
           </Typography> :null} 
       <CardActions>
-      <Button variant="contained" size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
+      <Button color="secondary" variant="contained" size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
       </CardActions>
       </CardContent></Card></Grid>
       </div>
