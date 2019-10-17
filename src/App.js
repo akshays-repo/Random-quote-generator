@@ -11,6 +11,9 @@ import AppBar from './components/appbar'
 
 
 const styles =(theme=> ( {
+  App:{
+    background:'#ecf0f1'
+  },
  container:{
    display:'flex',
    height:'100vh',
@@ -18,7 +21,7 @@ const styles =(theme=> ( {
  },
  card: {
   minWidth: 275,
-  background:  'linear-gradient(to right bottom, #26D0CE, #F45C43,#A6FFCB)',
+  background:  '#dcdde1',
  },
  
 bullet: {
@@ -35,8 +38,6 @@ pos: {
 button: {
   margin: theme.spacing(),
 },
-
-
 }));
 
 class App extends Component {
@@ -77,26 +78,25 @@ class App extends Component {
     console.log(this.state.quotes[this.state.selectedQuoteIndex])
    
     return (
-      <div className="App" id="">
+      <div className={this.props.classes.App}>
       <AppBar> </AppBar>
+      <Grid className={this.props.classes.container} id='quote-box' justify='center' container>
       <Card className={this.props.classes.card}>
       <CardContent>
-      <Grid className={this.props.classes.container} id='quote-box' justify='center' container>
-      
-     <Grid item >      
+           
       {this.selectedQuote ? 
         <Typography className={this.props.classes.title} variant="h6" color="inherit" >
-         {this.selectedQuote.quote} - {this.selectedQuote.author} 
-        </Typography> :null} 
-        
+         {this.selectedQuote.quote}
+        </Typography> :null}
+        {this.selectedQuote ? 
+          <Typography className={this.props.classes.pos} color="textSecondary">
+            -{this.selectedQuote.author} 
+          </Typography> :null} 
       <CardActions>
-      <Button variant="contained" display="flex" align='right' component="span"size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
+      <Button variant="contained" size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
       </CardActions>
-      </Grid></Grid>
-      </CardContent></Card>
+      </CardContent></Card></Grid>
       </div>
     );
   }}
-
-
-  export default withStyles(styles)(App);
+ export default withStyles(styles)(App);
