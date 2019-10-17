@@ -90,7 +90,7 @@ class App extends Component {
         </Typography> :null}
         {this.selectedQuote ? 
           <Typography className={this.props.classes.pos} color="textSecondary">
-            -{this.selectedQuote.author} 
+            {this.selectedQuote.author} 
           </Typography> :null} 
       <CardActions>
       <Button variant="contained" size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
