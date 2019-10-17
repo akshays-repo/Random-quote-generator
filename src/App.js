@@ -30,7 +30,7 @@ bullet: {
   transform: 'scale(0.8)',
 },
 title: {
-  fontSize:20,
+  fontSize:16,
 },
 pos: {
   marginBottom: 12,
