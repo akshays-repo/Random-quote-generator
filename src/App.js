@@ -90,7 +90,7 @@ class App extends Component {
         </Typography> :null} 
         
       <CardActions>
-      <Button variant="contained" display="flex" align='middle' component="span"size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
+      <Button variant="contained" display="flex" align='right' component="span"size="small" onClick={this.assignNewQuoteIndex}>Next Quote</Button>
       </CardActions>
       </Grid></Grid>
       </CardContent></Card>
